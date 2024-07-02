@@ -16,6 +16,36 @@ let speed = 80;
 let maxScore = 0;
 
 
+
+canvas.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+});
+
+canvas.addEventListener('touchmove', function(e) {
+    let endX = e.touches[0].clientX;
+    let endY = e.touches[0].clientY;
+    
+    let dx = endX - startX;
+    let dy = endY - startY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        if (dx > 0) {
+            direction = 'RIGHT';
+        } else {
+            direction = 'LEFT';
+        }
+    } else {
+        if (dy > 0) {
+            direction = 'DOWN';
+        } else {
+            direction = 'UP';
+        }
+    }
+
+    startX = endX;
+    startY = endY;
+});
 // function drawRect(x, y, color) {
 //     ctx.fillStyle = color;
 //     ctx.fillRect(x, y, gridSize, gridSize);

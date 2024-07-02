@@ -15,9 +15,9 @@ canvas {
     border-radius: 10px;
     width: 90vw;
     max-width: 600px; 
-    height: 110vw; 
+    height: 90vw; 
     max-height: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #score {
@@ -27,16 +27,19 @@ canvas {
 
 
 #gameOver {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background:#5688C7;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 25%;
-    height: 20%;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    max-height: 80%;
+    z-index: 1000;
 }
 
 
@@ -51,7 +54,13 @@ canvas {
 
 .btn{
     background-color: #F18701;
-    border-bottom: #F18701;
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+    margin-top: 20px; 
     
 }
 .btn:hover{
@@ -60,6 +69,6 @@ canvas {
 }
 
 .big-text{
-    font-size: large;
-    margin-bottom: 5%;
+    font-size: 24px; 
+    margin-bottom: 20px; 
 }
