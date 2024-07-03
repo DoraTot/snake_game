@@ -14,10 +14,12 @@
     <div id="maxScore">Max Score: 0</div>
 
     <canvas id="gameCanvas" width="600" height="600"></canvas>
+    <div id="countDown" class="countDown"></div>
     <div id="gameOver" class="hidden">
         <h1 class="big-text">Game Over!</h1>
-        <button class="btn btn-primary" onclick="resetGame()">Play Again</button>
+        <button class="btn btn-primary" id="playAgainBtn" onclick="startGame()">Play Again</button>
     </div>
+
     <script src="game-functionality.js"></script>
 
     
